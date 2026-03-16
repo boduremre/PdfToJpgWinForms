@@ -136,7 +136,7 @@ namespace PdfToJpgWinForms
 
             // İşlem süresini hesapla ve ekranda göster (örneğin "00:01:23" gibi)
             DateTime now = DateTime.Now;
-            foxBigLabel4.Text = string.Format("{0} / {1} sn.", _processStartTime, Math.Round((now - _processStartTime).TotalSeconds, 0).ToString());
+            foxBigLabel4.Text = string.Format("{0} / {1} sn.", _processStartTime.ToString("HH:mm:ss"), Math.Round((now - _processStartTime).TotalSeconds, 0).ToString());
             foxBigLabel4.Refresh();
 
             // İşlenen sayfa sayısına göre yüzdelik hesapla
