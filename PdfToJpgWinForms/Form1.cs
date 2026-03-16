@@ -66,6 +66,19 @@ namespace PdfToJpgWinForms
 
             try
             {
+                // ⭐ Eğer checkbox seçiliyse export klasörünü aç
+                if (foxCheckBoxEdit4.Checked)
+                {
+                    string exportFolder = Path.Combine(folderPath, "JPG_Output");
+
+                    if (Directory.Exists(exportFolder))
+                    {
+                        Directory.Delete(exportFolder, true); // true = içindekilerle birlikte sil
+                    }
+
+                    Directory.CreateDirectory(exportFolder);
+                }
+
                 await Task.Run(() =>
                 {
                     _pdfExportService.ProcessFolder(folderPath, createFolderPerPdf);
@@ -145,6 +158,7 @@ namespace PdfToJpgWinForms
             foxCheckBoxEdit1.Enabled = enabled;
             foxCheckBoxEdit2.Enabled = enabled;
             foxCheckBoxEdit3.Enabled = enabled;
+            foxCheckBoxEdit4.Enabled = enabled;
 
             materialButton1.Enabled = enabled;
             materialButton2.Enabled = enabled;

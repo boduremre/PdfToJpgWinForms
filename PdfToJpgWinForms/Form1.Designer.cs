@@ -32,6 +32,7 @@
             parrotGroupBox1 = new ReaLTaiizor.Controls.ParrotGroupBox();
             parrotButton1 = new ReaLTaiizor.Controls.ParrotButton();
             parrotGroupBox2 = new ReaLTaiizor.Controls.ParrotGroupBox();
+            foxCheckBoxEdit4 = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
             foxCheckBoxEdit3 = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
             foxCheckBoxEdit2 = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
             foxCheckBoxEdit1 = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
@@ -99,6 +100,7 @@
             // 
             parrotGroupBox2.BorderColor = Color.DodgerBlue;
             parrotGroupBox2.BorderWidth = 1;
+            parrotGroupBox2.Controls.Add(foxCheckBoxEdit4);
             parrotGroupBox2.Controls.Add(foxCheckBoxEdit3);
             parrotGroupBox2.Controls.Add(foxCheckBoxEdit2);
             parrotGroupBox2.Controls.Add(foxCheckBoxEdit1);
@@ -114,6 +116,23 @@
             parrotGroupBox2.Text = "İşlemler";
             parrotGroupBox2.TextColor = Color.DodgerBlue;
             // 
+            // foxCheckBoxEdit4
+            // 
+            foxCheckBoxEdit4.BackColor = Color.Transparent;
+            foxCheckBoxEdit4.BorderColor = Color.FromArgb(200, 200, 200);
+            foxCheckBoxEdit4.Checked = true;
+            foxCheckBoxEdit4.DisabledBorderColor = Color.FromArgb(230, 230, 230);
+            foxCheckBoxEdit4.DisabledTextColor = Color.FromArgb(166, 178, 190);
+            foxCheckBoxEdit4.EnabledCalc = true;
+            foxCheckBoxEdit4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            foxCheckBoxEdit4.ForeColor = Color.FromArgb(66, 78, 90);
+            foxCheckBoxEdit4.HoverBorderColor = Color.FromArgb(44, 156, 218);
+            foxCheckBoxEdit4.Location = new Point(1014, 73);
+            foxCheckBoxEdit4.Name = "foxCheckBoxEdit4";
+            foxCheckBoxEdit4.Size = new Size(242, 32);
+            foxCheckBoxEdit4.TabIndex = 5;
+            foxCheckBoxEdit4.Text = "Export Klasörünü Temizle";
+            // 
             // foxCheckBoxEdit3
             // 
             foxCheckBoxEdit3.BackColor = Color.Transparent;
@@ -125,9 +144,9 @@
             foxCheckBoxEdit3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
             foxCheckBoxEdit3.ForeColor = Color.FromArgb(66, 78, 90);
             foxCheckBoxEdit3.HoverBorderColor = Color.FromArgb(44, 156, 218);
-            foxCheckBoxEdit3.Location = new Point(611, 68);
+            foxCheckBoxEdit3.Location = new Point(604, 73);
             foxCheckBoxEdit3.Name = "foxCheckBoxEdit3";
-            foxCheckBoxEdit3.Size = new Size(412, 32);
+            foxCheckBoxEdit3.Size = new Size(397, 32);
             foxCheckBoxEdit3.TabIndex = 5;
             foxCheckBoxEdit3.Text = "Dosya Adını ID olarak Kaydet (QRCode Oku)";
             // 
@@ -142,9 +161,9 @@
             foxCheckBoxEdit2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
             foxCheckBoxEdit2.ForeColor = Color.FromArgb(66, 78, 90);
             foxCheckBoxEdit2.HoverBorderColor = Color.FromArgb(44, 156, 218);
-            foxCheckBoxEdit2.Location = new Point(340, 68);
+            foxCheckBoxEdit2.Location = new Point(334, 73);
             foxCheckBoxEdit2.Name = "foxCheckBoxEdit2";
-            foxCheckBoxEdit2.Size = new Size(412, 32);
+            foxCheckBoxEdit2.Size = new Size(265, 32);
             foxCheckBoxEdit2.TabIndex = 5;
             foxCheckBoxEdit2.Text = "İşlem Sonrası Klasörü Göster";
             // 
@@ -159,9 +178,9 @@
             foxCheckBoxEdit1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
             foxCheckBoxEdit1.ForeColor = Color.FromArgb(66, 78, 90);
             foxCheckBoxEdit1.HoverBorderColor = Color.FromArgb(44, 156, 218);
-            foxCheckBoxEdit1.Location = new Point(14, 68);
+            foxCheckBoxEdit1.Location = new Point(14, 73);
             foxCheckBoxEdit1.Name = "foxCheckBoxEdit1";
-            foxCheckBoxEdit1.Size = new Size(412, 32);
+            foxCheckBoxEdit1.Size = new Size(314, 32);
             foxCheckBoxEdit1.TabIndex = 5;
             foxCheckBoxEdit1.Text = "Her Dosya için Farklı Klasör Oluştur";
             // 
@@ -188,7 +207,7 @@
             materialButton2.HighEmphasis = true;
             materialButton2.Icon = null;
             materialButton2.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton2.Location = new Point(1158, 24);
+            materialButton2.Location = new Point(1158, 26);
             materialButton2.Margin = new Padding(4, 6, 4, 6);
             materialButton2.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton2.Name = "materialButton2";
@@ -209,7 +228,7 @@
             materialButton1.HighEmphasis = true;
             materialButton1.Icon = null;
             materialButton1.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton1.Location = new Point(1043, 24);
+            materialButton1.Location = new Point(1043, 26);
             materialButton1.Margin = new Padding(4, 6, 4, 6);
             materialButton1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton1.Name = "materialButton1";
@@ -427,7 +446,7 @@
             Name = "Form1";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "PDF To JPG Converter";
+            Text = "PDF To JPG Converter (Emre Bodur-software@emrebodur.com)";
             TransparencyKey = Color.Fuchsia;
             Load += Form1_Load;
             parrotGroupBox1.ResumeLayout(false);
@@ -466,5 +485,6 @@
         private ReaLTaiizor.Controls.FoxCheckBoxEdit foxCheckBoxEdit3;
         private ReaLTaiizor.Controls.FoxBigLabel foxBigLabel8;
         private ReaLTaiizor.Controls.FoxBigLabel foxBigLabel7;
+        private ReaLTaiizor.Controls.FoxCheckBoxEdit foxCheckBoxEdit4;
     }
 }
