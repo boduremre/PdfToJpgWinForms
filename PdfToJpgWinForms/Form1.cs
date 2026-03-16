@@ -80,11 +80,6 @@ namespace PdfToJpgWinForms
                     parrotGroupBox3.Visible = false;
                     this.Height -= parrotGroupBox3.Height + 5; // 5px boşluk için
                 }
-                else
-                {
-                    parrotGroupBox3.Visible = true;
-                    this.Height += parrotGroupBox3.Height + 5; // 5px boşluk için
-                }
 
                 await Task.Run(() =>
             {
@@ -117,7 +112,7 @@ namespace PdfToJpgWinForms
         private void PdfExportService_LogGenerated(string message)
         {
             // Eğer log gösterme checkbox'ı seçili değilse, log mesajlarını ekranda göstermiyoruz.
-            if (!foxCheckBoxEdit5.Checked)
+            if (foxCheckBoxEdit5.Checked)
             {
                 if (InvokeRequired)
                 {
