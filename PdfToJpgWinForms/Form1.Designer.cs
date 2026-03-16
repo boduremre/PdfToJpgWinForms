@@ -32,23 +32,24 @@
             parrotGroupBox1 = new ReaLTaiizor.Controls.ParrotGroupBox();
             parrotButton1 = new ReaLTaiizor.Controls.ParrotButton();
             parrotGroupBox2 = new ReaLTaiizor.Controls.ParrotGroupBox();
+            foxCheckBoxEdit7 = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
+            foxCheckBoxEdit6 = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
             foxCheckBoxEdit4 = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
             foxCheckBoxEdit3 = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
+            foxCheckBoxEdit5 = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
             foxCheckBoxEdit2 = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
             foxCheckBoxEdit1 = new ReaLTaiizor.Controls.FoxCheckBoxEdit();
             moonTextBox1 = new ReaLTaiizor.Controls.MoonTextBox();
             materialButton2 = new ReaLTaiizor.Controls.MaterialButton();
             materialButton1 = new ReaLTaiizor.Controls.MaterialButton();
             parrotGroupBox3 = new ReaLTaiizor.Controls.ParrotGroupBox();
-            listBox1 = new ListBox();
+            materialListBox1 = new ReaLTaiizor.Controls.MaterialListBox();
             parrotGroupBox4 = new ReaLTaiizor.Controls.ParrotGroupBox();
             foxBigLabel6 = new ReaLTaiizor.Controls.FoxBigLabel();
             foxBigLabel5 = new ReaLTaiizor.Controls.FoxBigLabel();
-            foxBigLabel8 = new ReaLTaiizor.Controls.FoxBigLabel();
             foxBigLabel4 = new ReaLTaiizor.Controls.FoxBigLabel();
             foxBigLabel3 = new ReaLTaiizor.Controls.FoxBigLabel();
             foxBigLabel2 = new ReaLTaiizor.Controls.FoxBigLabel();
-            foxBigLabel7 = new ReaLTaiizor.Controls.FoxBigLabel();
             foxBigLabel1 = new ReaLTaiizor.Controls.FoxBigLabel();
             parrotGroupBox5 = new ReaLTaiizor.Controls.ParrotGroupBox();
             parrotCircleProgressBar1 = new ReaLTaiizor.Controls.ParrotCircleProgressBar();
@@ -100,21 +101,64 @@
             // 
             parrotGroupBox2.BorderColor = Color.DodgerBlue;
             parrotGroupBox2.BorderWidth = 1;
+            parrotGroupBox2.Controls.Add(foxCheckBoxEdit7);
+            parrotGroupBox2.Controls.Add(foxCheckBoxEdit6);
             parrotGroupBox2.Controls.Add(foxCheckBoxEdit4);
             parrotGroupBox2.Controls.Add(foxCheckBoxEdit3);
+            parrotGroupBox2.Controls.Add(foxCheckBoxEdit5);
             parrotGroupBox2.Controls.Add(foxCheckBoxEdit2);
             parrotGroupBox2.Controls.Add(foxCheckBoxEdit1);
             parrotGroupBox2.Controls.Add(moonTextBox1);
             parrotGroupBox2.Controls.Add(materialButton2);
             parrotGroupBox2.Controls.Add(materialButton1);
-            parrotGroupBox2.Location = new Point(6, 76);
+            parrotGroupBox2.Location = new Point(4, 70);
+            parrotGroupBox2.Margin = new Padding(2);
             parrotGroupBox2.Name = "parrotGroupBox2";
+            parrotGroupBox2.Padding = new Padding(2);
             parrotGroupBox2.ShowText = true;
-            parrotGroupBox2.Size = new Size(1263, 110);
+            parrotGroupBox2.Size = new Size(885, 141);
             parrotGroupBox2.TabIndex = 0;
             parrotGroupBox2.TabStop = false;
             parrotGroupBox2.Text = "İşlemler";
             parrotGroupBox2.TextColor = Color.DodgerBlue;
+            // 
+            // foxCheckBoxEdit7
+            // 
+            foxCheckBoxEdit7.BackColor = Color.Transparent;
+            foxCheckBoxEdit7.BorderColor = Color.FromArgb(200, 200, 200);
+            foxCheckBoxEdit7.Checked = false;
+            foxCheckBoxEdit7.DisabledBorderColor = Color.FromArgb(230, 230, 230);
+            foxCheckBoxEdit7.DisabledTextColor = Color.FromArgb(166, 178, 190);
+            foxCheckBoxEdit7.EnabledCalc = true;
+            foxCheckBoxEdit7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            foxCheckBoxEdit7.ForeColor = Color.FromArgb(66, 78, 90);
+            foxCheckBoxEdit7.HoverBorderColor = Color.FromArgb(44, 156, 218);
+            foxCheckBoxEdit7.Location = new Point(576, 99);
+            foxCheckBoxEdit7.Margin = new Padding(2);
+            foxCheckBoxEdit7.Name = "foxCheckBoxEdit7";
+            foxCheckBoxEdit7.Size = new Size(202, 29);
+            foxCheckBoxEdit7.TabIndex = 5;
+            foxCheckBoxEdit7.Text = "Uygulama Hakkında";
+            foxCheckBoxEdit7.CheckedChanged += foxCheckBoxEdit7_CheckedChanged;
+            // 
+            // foxCheckBoxEdit6
+            // 
+            foxCheckBoxEdit6.BackColor = Color.Transparent;
+            foxCheckBoxEdit6.BorderColor = Color.FromArgb(200, 200, 200);
+            foxCheckBoxEdit6.Checked = false;
+            foxCheckBoxEdit6.DisabledBorderColor = Color.FromArgb(230, 230, 230);
+            foxCheckBoxEdit6.DisabledTextColor = Color.FromArgb(166, 178, 190);
+            foxCheckBoxEdit6.EnabledCalc = true;
+            foxCheckBoxEdit6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            foxCheckBoxEdit6.ForeColor = Color.FromArgb(66, 78, 90);
+            foxCheckBoxEdit6.HoverBorderColor = Color.FromArgb(44, 156, 218);
+            foxCheckBoxEdit6.Location = new Point(349, 99);
+            foxCheckBoxEdit6.Margin = new Padding(2);
+            foxCheckBoxEdit6.Name = "foxCheckBoxEdit6";
+            foxCheckBoxEdit6.Size = new Size(202, 29);
+            foxCheckBoxEdit6.TabIndex = 5;
+            foxCheckBoxEdit6.Text = "Uygulamayı Yeniden Başlat";
+            foxCheckBoxEdit6.CheckedChanged += foxCheckBoxEdit6_CheckedChanged;
             // 
             // foxCheckBoxEdit4
             // 
@@ -127,9 +171,10 @@
             foxCheckBoxEdit4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
             foxCheckBoxEdit4.ForeColor = Color.FromArgb(66, 78, 90);
             foxCheckBoxEdit4.HoverBorderColor = Color.FromArgb(44, 156, 218);
-            foxCheckBoxEdit4.Location = new Point(1014, 73);
+            foxCheckBoxEdit4.Location = new Point(709, 66);
+            foxCheckBoxEdit4.Margin = new Padding(2);
             foxCheckBoxEdit4.Name = "foxCheckBoxEdit4";
-            foxCheckBoxEdit4.Size = new Size(242, 32);
+            foxCheckBoxEdit4.Size = new Size(169, 29);
             foxCheckBoxEdit4.TabIndex = 5;
             foxCheckBoxEdit4.Text = "Export Klasörünü Temizle";
             // 
@@ -144,11 +189,30 @@
             foxCheckBoxEdit3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
             foxCheckBoxEdit3.ForeColor = Color.FromArgb(66, 78, 90);
             foxCheckBoxEdit3.HoverBorderColor = Color.FromArgb(44, 156, 218);
-            foxCheckBoxEdit3.Location = new Point(604, 73);
+            foxCheckBoxEdit3.Location = new Point(426, 66);
+            foxCheckBoxEdit3.Margin = new Padding(2);
             foxCheckBoxEdit3.Name = "foxCheckBoxEdit3";
-            foxCheckBoxEdit3.Size = new Size(397, 32);
+            foxCheckBoxEdit3.Size = new Size(278, 29);
             foxCheckBoxEdit3.TabIndex = 5;
             foxCheckBoxEdit3.Text = "Dosya Adını ID olarak Kaydet (QRCode Oku)";
+            // 
+            // foxCheckBoxEdit5
+            // 
+            foxCheckBoxEdit5.BackColor = Color.Transparent;
+            foxCheckBoxEdit5.BorderColor = Color.FromArgb(200, 200, 200);
+            foxCheckBoxEdit5.Checked = true;
+            foxCheckBoxEdit5.DisabledBorderColor = Color.FromArgb(230, 230, 230);
+            foxCheckBoxEdit5.DisabledTextColor = Color.FromArgb(166, 178, 190);
+            foxCheckBoxEdit5.EnabledCalc = true;
+            foxCheckBoxEdit5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            foxCheckBoxEdit5.ForeColor = Color.FromArgb(66, 78, 90);
+            foxCheckBoxEdit5.HoverBorderColor = Color.FromArgb(44, 156, 218);
+            foxCheckBoxEdit5.Location = new Point(109, 99);
+            foxCheckBoxEdit5.Margin = new Padding(2);
+            foxCheckBoxEdit5.Name = "foxCheckBoxEdit5";
+            foxCheckBoxEdit5.Size = new Size(186, 29);
+            foxCheckBoxEdit5.TabIndex = 5;
+            foxCheckBoxEdit5.Text = "Log Kayıtlarını Göster";
             // 
             // foxCheckBoxEdit2
             // 
@@ -161,9 +225,10 @@
             foxCheckBoxEdit2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
             foxCheckBoxEdit2.ForeColor = Color.FromArgb(66, 78, 90);
             foxCheckBoxEdit2.HoverBorderColor = Color.FromArgb(44, 156, 218);
-            foxCheckBoxEdit2.Location = new Point(334, 73);
+            foxCheckBoxEdit2.Location = new Point(235, 66);
+            foxCheckBoxEdit2.Margin = new Padding(2);
             foxCheckBoxEdit2.Name = "foxCheckBoxEdit2";
-            foxCheckBoxEdit2.Size = new Size(265, 32);
+            foxCheckBoxEdit2.Size = new Size(186, 29);
             foxCheckBoxEdit2.TabIndex = 5;
             foxCheckBoxEdit2.Text = "İşlem Sonrası Klasörü Göster";
             // 
@@ -178,9 +243,10 @@
             foxCheckBoxEdit1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
             foxCheckBoxEdit1.ForeColor = Color.FromArgb(66, 78, 90);
             foxCheckBoxEdit1.HoverBorderColor = Color.FromArgb(44, 156, 218);
-            foxCheckBoxEdit1.Location = new Point(14, 73);
+            foxCheckBoxEdit1.Location = new Point(10, 66);
+            foxCheckBoxEdit1.Margin = new Padding(2);
             foxCheckBoxEdit1.Name = "foxCheckBoxEdit1";
-            foxCheckBoxEdit1.Size = new Size(314, 32);
+            foxCheckBoxEdit1.Size = new Size(220, 29);
             foxCheckBoxEdit1.TabIndex = 5;
             foxCheckBoxEdit1.Text = "Her Dosya için Farklı Klasör Oluştur";
             // 
@@ -192,10 +258,11 @@
             moonTextBox1.Enabled = false;
             moonTextBox1.Font = new Font("Microsoft Sans Serif", 8F);
             moonTextBox1.ForeColor = Color.Gray;
-            moonTextBox1.Location = new Point(14, 32);
+            moonTextBox1.Location = new Point(10, 25);
+            moonTextBox1.Margin = new Padding(2);
             moonTextBox1.Name = "moonTextBox1";
             moonTextBox1.ReadOnly = true;
-            moonTextBox1.Size = new Size(1022, 26);
+            moonTextBox1.Size = new Size(653, 20);
             moonTextBox1.TabIndex = 1;
             // 
             // materialButton2
@@ -207,8 +274,8 @@
             materialButton2.HighEmphasis = true;
             materialButton2.Icon = null;
             materialButton2.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton2.Location = new Point(1158, 26);
-            materialButton2.Margin = new Padding(4, 6, 4, 6);
+            materialButton2.Location = new Point(780, 16);
+            materialButton2.Margin = new Padding(3, 4, 3, 4);
             materialButton2.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton2.Name = "materialButton2";
             materialButton2.NoAccentTextColor = Color.Empty;
@@ -228,8 +295,8 @@
             materialButton1.HighEmphasis = true;
             materialButton1.Icon = null;
             materialButton1.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton1.Location = new Point(1043, 26);
-            materialButton1.Margin = new Padding(4, 6, 4, 6);
+            materialButton1.Location = new Point(671, 16);
+            materialButton1.Margin = new Padding(3, 4, 3, 4);
             materialButton1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton1.Name = "materialButton1";
             materialButton1.NoAccentTextColor = Color.Empty;
@@ -245,25 +312,31 @@
             // 
             parrotGroupBox3.BorderColor = Color.DodgerBlue;
             parrotGroupBox3.BorderWidth = 1;
-            parrotGroupBox3.Controls.Add(listBox1);
-            parrotGroupBox3.Location = new Point(6, 527);
+            parrotGroupBox3.Controls.Add(materialListBox1);
+            parrotGroupBox3.Location = new Point(5, 416);
+            parrotGroupBox3.Margin = new Padding(2);
             parrotGroupBox3.Name = "parrotGroupBox3";
+            parrotGroupBox3.Padding = new Padding(2);
             parrotGroupBox3.ShowText = true;
-            parrotGroupBox3.Size = new Size(1263, 358);
+            parrotGroupBox3.Size = new Size(884, 252);
             parrotGroupBox3.TabIndex = 1;
             parrotGroupBox3.TabStop = false;
             parrotGroupBox3.Text = "Log";
             parrotGroupBox3.TextColor = Color.DodgerBlue;
             // 
-            // listBox1
+            // materialListBox1
             // 
-            listBox1.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 21;
-            listBox1.Location = new Point(6, 30);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(1251, 319);
-            listBox1.TabIndex = 1;
+            materialListBox1.BackColor = Color.White;
+            materialListBox1.BorderColor = Color.LightGray;
+            materialListBox1.Depth = 0;
+            materialListBox1.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialListBox1.Location = new Point(9, 21);
+            materialListBox1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialListBox1.Name = "materialListBox1";
+            materialListBox1.SelectedIndex = -1;
+            materialListBox1.SelectedItem = null;
+            materialListBox1.Size = new Size(868, 226);
+            materialListBox1.TabIndex = 6;
             // 
             // parrotGroupBox4
             // 
@@ -271,16 +344,16 @@
             parrotGroupBox4.BorderWidth = 1;
             parrotGroupBox4.Controls.Add(foxBigLabel6);
             parrotGroupBox4.Controls.Add(foxBigLabel5);
-            parrotGroupBox4.Controls.Add(foxBigLabel8);
             parrotGroupBox4.Controls.Add(foxBigLabel4);
             parrotGroupBox4.Controls.Add(foxBigLabel3);
             parrotGroupBox4.Controls.Add(foxBigLabel2);
-            parrotGroupBox4.Controls.Add(foxBigLabel7);
             parrotGroupBox4.Controls.Add(foxBigLabel1);
-            parrotGroupBox4.Location = new Point(6, 192);
+            parrotGroupBox4.Location = new Point(4, 215);
+            parrotGroupBox4.Margin = new Padding(2);
             parrotGroupBox4.Name = "parrotGroupBox4";
+            parrotGroupBox4.Padding = new Padding(2);
             parrotGroupBox4.ShowText = true;
-            parrotGroupBox4.Size = new Size(952, 329);
+            parrotGroupBox4.Size = new Size(666, 197);
             parrotGroupBox4.TabIndex = 2;
             parrotGroupBox4.TabStop = false;
             parrotGroupBox4.Text = "Temel Bilgiler";
@@ -293,9 +366,10 @@
             foxBigLabel6.ForeColor = Color.FromArgb(76, 88, 100);
             foxBigLabel6.Line = ReaLTaiizor.Controls.FoxBigLabel.Direction.Bottom;
             foxBigLabel6.LineColor = Color.FromArgb(200, 200, 200);
-            foxBigLabel6.Location = new Point(478, 240);
+            foxBigLabel6.Location = new Point(376, 144);
+            foxBigLabel6.Margin = new Padding(2);
             foxBigLabel6.Name = "foxBigLabel6";
-            foxBigLabel6.Size = new Size(468, 62);
+            foxBigLabel6.Size = new Size(286, 37);
             foxBigLabel6.TabIndex = 3;
             foxBigLabel6.Text = "0 / 0";
             // 
@@ -306,37 +380,26 @@
             foxBigLabel5.ForeColor = Color.FromArgb(76, 88, 100);
             foxBigLabel5.Line = ReaLTaiizor.Controls.FoxBigLabel.Direction.Bottom;
             foxBigLabel5.LineColor = Color.FromArgb(200, 200, 200);
-            foxBigLabel5.Location = new Point(478, 172);
+            foxBigLabel5.Location = new Point(376, 79);
+            foxBigLabel5.Margin = new Padding(2);
             foxBigLabel5.Name = "foxBigLabel5";
-            foxBigLabel5.Size = new Size(468, 62);
+            foxBigLabel5.Size = new Size(286, 37);
             foxBigLabel5.TabIndex = 3;
             foxBigLabel5.Text = "0";
-            // 
-            // foxBigLabel8
-            // 
-            foxBigLabel8.BackColor = Color.Transparent;
-            foxBigLabel8.Font = new Font("Segoe UI Semibold", 20F);
-            foxBigLabel8.ForeColor = Color.FromArgb(76, 88, 100);
-            foxBigLabel8.Line = ReaLTaiizor.Controls.FoxBigLabel.Direction.Bottom;
-            foxBigLabel8.LineColor = Color.FromArgb(200, 200, 200);
-            foxBigLabel8.Location = new Point(478, 104);
-            foxBigLabel8.Name = "foxBigLabel8";
-            foxBigLabel8.Size = new Size(468, 62);
-            foxBigLabel8.TabIndex = 3;
-            foxBigLabel8.Text = "dd.MM.yyyy HH:mm:ss";
             // 
             // foxBigLabel4
             // 
             foxBigLabel4.BackColor = Color.Transparent;
-            foxBigLabel4.Font = new Font("Segoe UI Semibold", 20F);
+            foxBigLabel4.Font = new Font("Segoe UI Semibold", 16F);
             foxBigLabel4.ForeColor = Color.FromArgb(76, 88, 100);
             foxBigLabel4.Line = ReaLTaiizor.Controls.FoxBigLabel.Direction.Bottom;
             foxBigLabel4.LineColor = Color.FromArgb(200, 200, 200);
-            foxBigLabel4.Location = new Point(478, 36);
+            foxBigLabel4.Location = new Point(376, 22);
+            foxBigLabel4.Margin = new Padding(2);
             foxBigLabel4.Name = "foxBigLabel4";
-            foxBigLabel4.Size = new Size(468, 62);
+            foxBigLabel4.Size = new Size(286, 37);
             foxBigLabel4.TabIndex = 3;
-            foxBigLabel4.Text = "dd.MM.yyyy HH:mm:ss";
+            foxBigLabel4.Text = "HH:mm:ss";
             // 
             // foxBigLabel3
             // 
@@ -345,9 +408,10 @@
             foxBigLabel3.ForeColor = Color.FromArgb(76, 88, 100);
             foxBigLabel3.Line = ReaLTaiizor.Controls.FoxBigLabel.Direction.Bottom;
             foxBigLabel3.LineColor = Color.FromArgb(200, 200, 200);
-            foxBigLabel3.Location = new Point(6, 240);
+            foxBigLabel3.Location = new Point(10, 144);
+            foxBigLabel3.Margin = new Padding(2);
             foxBigLabel3.Name = "foxBigLabel3";
-            foxBigLabel3.Size = new Size(456, 62);
+            foxBigLabel3.Size = new Size(362, 37);
             foxBigLabel3.TabIndex = 2;
             foxBigLabel3.Text = "Çıkarılan Sayfa Sayısı ";
             // 
@@ -358,47 +422,38 @@
             foxBigLabel2.ForeColor = Color.FromArgb(76, 88, 100);
             foxBigLabel2.Line = ReaLTaiizor.Controls.FoxBigLabel.Direction.Bottom;
             foxBigLabel2.LineColor = Color.FromArgb(200, 200, 200);
-            foxBigLabel2.Location = new Point(6, 172);
+            foxBigLabel2.Location = new Point(10, 79);
+            foxBigLabel2.Margin = new Padding(2);
             foxBigLabel2.Name = "foxBigLabel2";
-            foxBigLabel2.Size = new Size(456, 62);
+            foxBigLabel2.Size = new Size(362, 37);
             foxBigLabel2.TabIndex = 2;
             foxBigLabel2.Text = "Toplam Dosya Sayısı";
-            // 
-            // foxBigLabel7
-            // 
-            foxBigLabel7.BackColor = Color.Transparent;
-            foxBigLabel7.Font = new Font("Segoe UI Semibold", 20F);
-            foxBigLabel7.ForeColor = Color.FromArgb(76, 88, 100);
-            foxBigLabel7.Line = ReaLTaiizor.Controls.FoxBigLabel.Direction.Bottom;
-            foxBigLabel7.LineColor = Color.FromArgb(200, 200, 200);
-            foxBigLabel7.Location = new Point(6, 104);
-            foxBigLabel7.Name = "foxBigLabel7";
-            foxBigLabel7.Size = new Size(355, 62);
-            foxBigLabel7.TabIndex = 2;
-            foxBigLabel7.Text = "Bitiş Zamanı";
             // 
             // foxBigLabel1
             // 
             foxBigLabel1.BackColor = Color.Transparent;
-            foxBigLabel1.Font = new Font("Segoe UI Semibold", 20F);
+            foxBigLabel1.Font = new Font("Segoe UI Semibold", 18F);
             foxBigLabel1.ForeColor = Color.FromArgb(76, 88, 100);
             foxBigLabel1.Line = ReaLTaiizor.Controls.FoxBigLabel.Direction.Bottom;
             foxBigLabel1.LineColor = Color.FromArgb(200, 200, 200);
-            foxBigLabel1.Location = new Point(6, 36);
+            foxBigLabel1.Location = new Point(10, 22);
+            foxBigLabel1.Margin = new Padding(2);
             foxBigLabel1.Name = "foxBigLabel1";
-            foxBigLabel1.Size = new Size(355, 62);
+            foxBigLabel1.Size = new Size(362, 37);
             foxBigLabel1.TabIndex = 2;
-            foxBigLabel1.Text = "Başlama Zamanı";
+            foxBigLabel1.Text = "Başlama Zamanı ve Geçen Süre";
             // 
             // parrotGroupBox5
             // 
             parrotGroupBox5.BorderColor = Color.DodgerBlue;
             parrotGroupBox5.BorderWidth = 1;
             parrotGroupBox5.Controls.Add(parrotCircleProgressBar1);
-            parrotGroupBox5.Location = new Point(964, 192);
+            parrotGroupBox5.Location = new Point(675, 215);
+            parrotGroupBox5.Margin = new Padding(2);
             parrotGroupBox5.Name = "parrotGroupBox5";
+            parrotGroupBox5.Padding = new Padding(2);
             parrotGroupBox5.ShowText = true;
-            parrotGroupBox5.Size = new Size(305, 329);
+            parrotGroupBox5.Size = new Size(214, 197);
             parrotGroupBox5.TabIndex = 3;
             parrotGroupBox5.TabStop = false;
             parrotGroupBox5.Text = "İlerleme Durumu";
@@ -413,12 +468,13 @@
             parrotCircleProgressBar1.FilledThickness = 40;
             parrotCircleProgressBar1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
             parrotCircleProgressBar1.IsAnimated = false;
-            parrotCircleProgressBar1.Location = new Point(6, 30);
+            parrotCircleProgressBar1.Location = new Point(19, 18);
+            parrotCircleProgressBar1.Margin = new Padding(2);
             parrotCircleProgressBar1.Name = "parrotCircleProgressBar1";
             parrotCircleProgressBar1.Percentage = 0;
             parrotCircleProgressBar1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             parrotCircleProgressBar1.ShowText = true;
-            parrotCircleProgressBar1.Size = new Size(293, 293);
+            parrotCircleProgressBar1.Size = new Size(175, 175);
             parrotCircleProgressBar1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             parrotCircleProgressBar1.TabIndex = 1;
             parrotCircleProgressBar1.TextColor = Color.Gray;
@@ -433,17 +489,19 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1274, 891);
+            ClientSize = new Size(895, 672);
             Controls.Add(parrotGroupBox5);
             Controls.Add(parrotGroupBox4);
             Controls.Add(parrotGroupBox3);
             Controls.Add(parrotGroupBox2);
+            Margin = new Padding(2);
             MaximizeBox = false;
-            MaximumSize = new Size(3840, 2100);
-            MinimumSize = new Size(261, 61);
+            MaximumSize = new Size(2688, 1260);
+            MinimumSize = new Size(183, 37);
             Name = "Form1";
+            Padding = new Padding(2, 38, 2, 2);
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PDF To JPG Converter (Emre Bodur-software@emrebodur.com)";
@@ -473,7 +531,6 @@
         private ReaLTaiizor.Controls.ParrotGroupBox parrotGroupBox5;
         private ReaLTaiizor.Controls.ParrotCircleProgressBar parrotCircleProgressBar1;
         private OpenFileDialog openFileDialog1;
-        private ListBox listBox1;
         private ReaLTaiizor.Controls.FoxCheckBoxEdit foxCheckBoxEdit1;
         private ReaLTaiizor.Controls.FoxCheckBoxEdit foxCheckBoxEdit2;
         private ReaLTaiizor.Controls.FoxBigLabel foxBigLabel3;
@@ -483,8 +540,10 @@
         private ReaLTaiizor.Controls.FoxBigLabel foxBigLabel5;
         private ReaLTaiizor.Controls.FoxBigLabel foxBigLabel4;
         private ReaLTaiizor.Controls.FoxCheckBoxEdit foxCheckBoxEdit3;
-        private ReaLTaiizor.Controls.FoxBigLabel foxBigLabel8;
-        private ReaLTaiizor.Controls.FoxBigLabel foxBigLabel7;
         private ReaLTaiizor.Controls.FoxCheckBoxEdit foxCheckBoxEdit4;
+        private ReaLTaiizor.Controls.FoxCheckBoxEdit foxCheckBoxEdit5;
+        private ReaLTaiizor.Controls.MaterialListBox materialListBox1;
+        private ReaLTaiizor.Controls.FoxCheckBoxEdit foxCheckBoxEdit6;
+        private ReaLTaiizor.Controls.FoxCheckBoxEdit foxCheckBoxEdit7;
     }
 }
