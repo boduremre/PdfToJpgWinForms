@@ -121,8 +121,9 @@ namespace PdfToJpgWinForms
                 }
 
                 // Log mesajını zaman damgasıyla birlikte listbox'a ekle
-                materialListBox1.Items.Add(new MaterialListBoxItem($"{DateTime.Now:dd.MM.yyyy HH:mm:ss.fff} - {message}"));
-                materialListBox1.TabIndex = materialListBox1.Items.Count - 1;
+                //materialListBox1.Items.Add(new MaterialListBoxItem($"{DateTime.Now:dd.MM.yyyy HH:mm:ss.fff} - {message}"));
+                materialListBox1.Items.Insert(0, new MaterialListBoxItem($"{DateTime.Now:dd.MM.yyyy HH:mm:ss.fff} - {message}"));
+                //materialListBox1.TabIndex = materialListBox1.Items.Count - 1;
             }
         }
 
@@ -136,7 +137,9 @@ namespace PdfToJpgWinForms
 
             // İşlem süresini hesapla ve ekranda göster (örneğin "00:01:23" gibi)
             DateTime now = DateTime.Now;
-            foxBigLabel4.Text = string.Format("{0} / {1} sn.", _processStartTime.ToString("HH:mm:ss"), Math.Round((now - _processStartTime).TotalSeconds, 0).ToString());
+            TimeSpan duration = now - _processStartTime;
+
+            foxBigLabel4.Text = string.Format("{0} / {1}", _processStartTime.ToString("HH:mm:ss"), duration.ToString(@"hh\:mm\:ss"));
             foxBigLabel4.Refresh();
 
             // İşlenen sayfa sayısına göre yüzdelik hesapla
@@ -180,6 +183,8 @@ namespace PdfToJpgWinForms
             foxCheckBoxEdit3.Enabled = enabled;
             foxCheckBoxEdit4.Enabled = enabled;
             foxCheckBoxEdit5.Enabled = enabled;
+            foxCheckBoxEdit6.Enabled = enabled;
+            foxCheckBoxEdit7.Enabled = enabled;
 
             materialButton1.Enabled = enabled;
             materialButton2.Enabled = enabled;
